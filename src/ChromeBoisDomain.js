@@ -18,6 +18,19 @@ export default class ChromeBoisDomain extends Component {
    * listener that should fire it!
    */
 
+   handleMouseClick = (event) => {
+    toggleCycling()
+  }
+
+  handleKeyDown = (event) => {
+    if (event.key === 'a') {
+      resize('+')
+    } 
+    if (event.key === 's') {
+      resize('-')
+    }
+  }
+
   /* TODO: Add an event listener to the `<canvas>` element to capture when a key
   /* is pressed. When a key is pressed, an event handler should invoke the
   /* provided `resize` function with a single argument of either '+' or '-'
